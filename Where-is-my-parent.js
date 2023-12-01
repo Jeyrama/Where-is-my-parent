@@ -19,3 +19,9 @@ Task:
 
 
 // Solution
+
+function findChildren(dancingBrigade) {
+  return dancingBrigade.split("")
+                       .sort((a,b)=>a.localCompare(b, 'kf', {caseFirst:"upper"}))
+                       .join("");
+}
