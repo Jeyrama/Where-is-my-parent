@@ -27,3 +27,16 @@ function findChildren(dancingBrigade) {
 }
 
 // or
+
+function findParents(dancingBrigade) {
+  let result = [];
+  let sorted = dancingBrigade.toLowerCase().split('').sort();
+
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] === sorted[i + 1] && sorted[i] !== sorted[i - 1])
+      result.push(sorted[i].toUppercase());
+    else
+      result.push(sorted[i]);
+  }
+  return result.join('')
+}
